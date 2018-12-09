@@ -1,48 +1,158 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js">
-<!--<![endif]-->
+<!doctype html>
+<html class="no-js">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
+    <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
-    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app="dashboardMdlApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <![endif]-->
 
-    <div ng-view></div>
+    <!-- Add your site or application content here -->
+    <!-- <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
 
-    <div>Angular seed app: v<span app-version></span></div>
+            <a class="navbar-brand" href="#/">dashboardMdl</a>
+          </div>
 
-    <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-    <script src="node_modules/angular/angular.js"></script>
+          <div class="collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/about">About</a></li>
+              <li><a ng-href="#/">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="  ">
+
+        <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+            <header class="demo-header mdl-layout__header mdl-color--white mdl-color--grey-100 mdl-color-text--grey-600">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">Heidi v2.0</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" id="search" />
+                            <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                        </div>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                        <li class="mdl-menu__item">About</li>
+                        <li class="mdl-menu__item">Contact</li>
+                        <li class="mdl-menu__item">Legal information</li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+                <header class="demo-drawer-header">
+                    <img src="images/user.jpg" class="demo-avatar">
+                    <div class="demo-avatar-dropdown">
+                        <span>Welcome to Heidi2.0</span>
+                        <div class="mdl-layout-spacer"></div>
+                        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons">arrow_drop_down</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                            <button class="mdl-menu__item">About</button>
+                            <button class="mdl-menu__item">Settings</button>
+                        </ul>
+                    </div>
+                </header>
+                <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+                    <a class="mdl-navigation__link" ui-sref="dashboard.home"><i class="mdl-color-text--blue-grey-400 material-icons">home</i>Main</a>
+                    <div class="mdl-layout-spacer"></div>
+                    <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons">help_outline</i></a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content mdl-color--grey-100">
+                <div ui-view=""></div>
+            </main>
+        </div>
+    </div>
+
+    <!--
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        /*!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');*/
+
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.js"></script>
-    <script src="node_modules/angular-animate/angular-animate.js"></script>
-    <script src="node_modules/angular-messages/angular-messages.js"></script>
-    <script src="node_modules/angular-material/angular-material.js"></script>
-    <script src="app.js"></script>
-    <script src="view1/view1.js"></script>
-    <script src="view2/view2.js"></script>
-    <script src="components/version/version.js"></script>
-    <script src="components/version/version-directive.js"></script>
-    <script src="components/version/interpolate-filter.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
