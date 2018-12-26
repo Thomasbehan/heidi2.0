@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>THOMAS-PC</Machine>
+    <WindowsUser>Thomas</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>77152760-0966-11e9-ad9e-e730f18c2e7a</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Apache Cordova Team</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\heidi2.0\notHeidi\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\heidi2.0\notHeidi\platforms\windows\build\windows\debug\x64\win10\AppX</LayoutDir>
+    <RegisteredManifestChecksum>28430E1C731F1B2347CD45395218FA3B847E6604DA07B9546C42EA6374500ED0</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>io.cordova.myappa4c6cc_1.0.0.0_x64__h35559jr9hy9m</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>io.cordova.myappa4c6cc_h35559jr9hy9m!io.cordova.myappa4c6cc</RegisteredUserModeAppID>
+    <RegisteredPackageID>io.cordova.myappa4c6cc</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova Team</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\heidi2.0\notHeidi\platforms\windows\build\windows\debug\x64\win10\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:18.999</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.412</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.419</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <Modified>2018-12-26T23:32:14.423</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <Modified>2018-12-26T23:32:14.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.434</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.440</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-12-26T23:32:14.445</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\images\cordova.png">
+      <PackagePath>www\images\cordova.png</PackagePath>
+      <Modified>2018-12-26T23:32:14.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\cordova-js-src\confighelper.js">
+      <PackagePath>www\cordova-js-src\confighelper.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.624</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.625</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.626</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\cordova-js-src\splashscreen.js">
+      <PackagePath>www\cordova-js-src\splashscreen.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.627</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.305</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.978</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\scripts\index.js">
+      <PackagePath>www\scripts\index.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.329</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\scripts\platformOverrides.js">
+      <PackagePath>www\scripts\platformOverrides.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.331</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\scripts\winstore-jscompat.js">
+      <PackagePath>www\scripts\winstore-jscompat.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.333</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+      <Modified>2018-12-26T23:32:14.295</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\css\index.css">
+      <PackagePath>www\css\index.css</PackagePath>
+      <Modified>2018-12-26T23:32:14.628</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\css\splashscreen.css">
+      <PackagePath>www\css\splashscreen.css</PackagePath>
+      <Modified>2018-12-26T23:32:14.309</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+      <Modified>2018-12-26T23:32:14.629</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+      <Modified>2018-12-26T23:32:14.550</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\heidi2.0\notHeidi\platforms\windows\build\windows\debug\x64\win10\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2018-12-26T23:32:18.712</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
