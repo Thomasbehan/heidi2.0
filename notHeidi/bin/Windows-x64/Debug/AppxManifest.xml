@@ -20,6 +20,32 @@
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
+    <Resource Language="ES-ABSTRACT" />
+    <Resource Language="IN-PUBLISH" />
+    <Resource Language="IS-ARRAYISH" />
+    <Resource Language="IS-BUFFER" />
+    <Resource Language="IS-BUILTIN-MODULE" />
+    <Resource Language="IS-CALLABLE" />
+    <Resource Language="IS-DOTFILE" />
+    <Resource Language="IS-EQUAL-SHALLOW" />
+    <Resource Language="IS-EXTGLOB" />
+    <Resource Language="IS-FINITE" />
+    <Resource Language="IS-INTEGER" />
+    <Resource Language="IS-NAN" />
+    <Resource Language="IS-NUMBER" />
+    <Resource Language="IS-ODD" />
+    <Resource Language="IS-PLAIN-OBJECT" />
+    <Resource Language="IS-POSIX-BRACKET" />
+    <Resource Language="IS-PROPERTY" />
+    <Resource Language="IS-REGEX" />
+    <Resource Language="IS-STREAM" />
+    <Resource Language="IS-SVG" />
+    <Resource Language="IS-SYMBOL" />
+    <Resource Language="IS-WINDOWS" />
+    <Resource Language="IS-WSL" />
+    <Resource Language="MS" />
+    <Resource Language="TO-REGEX" />
+    <Resource Language="TO-REGEX-RANGE" />
   </Resources>
   <Applications>
     <Application Id="io.cordova.myappa4c6cc" StartPage="ms-appx-web://io.cordova.myappa4c6cc/www/index.html">
