@@ -1,0 +1,18 @@
+<table ng-if="tables != null" class="topHeader">
+    <tr>
+        <th>Table Name</th>
+        <th>Engine</th>
+        <th>Row Format</th>
+        <th>Rows</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+    </tr>
+    <tr ng-repeat="table in tables">
+        <td>{{table.TABLE_NAME}}</td>
+        <td>{{table.ENGINE}}</td>
+        <td>{{table.ROW_FORMAT}}</td>
+        <td>{{table.TABLE_ROWS}}</td>
+        <td>{{table.CREATE_TIME}}</td>
+        <td>{{table.UPDATE_TIME}}</td>
+    </tr>
+</table>

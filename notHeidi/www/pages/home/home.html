@@ -13,7 +13,7 @@
     </div>
 </div>
 <hr class="mdc-list-divider">
-<div class="mdc-layout-grid topHeader">
+<div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell" ng-repeat="connect in myconnections">
             <div class="mdc-card demo-card">
@@ -25,7 +25,7 @@
                     <div class="mdc-card__secondary mdc-typography--body2 padding1rem">Click the bellow button to connect to {{connect.label}} as {{connect.username}}.</div>
                 </div>
                 <div class="mdc-card__actions mdc-card__actions--full-bleed">
-                    <a class="mdc-button mdc-card__action mdc-card__action--button" ng-click="connectToDB(connect)">
+                    <a class="mdc-button mdc-card__action mdc-card__action--button" ng-click="connectToDB(connect, $index)">
                         Connect
                         <i class="material-icons" aria-hidden="true">arrow_forward</i>
                     </a>

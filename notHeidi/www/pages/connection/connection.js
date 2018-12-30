@@ -8,9 +8,10 @@ import {
     MDCTextField
 } from '@material/textfield';
 export default /*@ngInject*/ function ($routeProvider) {
-    $routeProvider.when("/", {
-        templateUrl: './pages/home/home.html',
-        controller: function ($scope, $localStorage, $http, $location) {
+    $routeProvider.when("/connection/:databaseId", {
+        templateUrl: './pages/connection/connection.html',
+        controller: function ($scope, $localStorage, $http, $routeParams) {
+            console.log("connection");
             if ($localStorage.myconnections == undefined) {
                 $localStorage.myconnections = [];
             }
@@ -21,26 +22,24 @@ export default /*@ngInject*/ function ($routeProvider) {
             const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
                 return new MDCTextField(el);
             });
-            $scope.toggleNewConnection = function () {
-                if (dialog[0].isOpen) {
-                    dialog[0].close();
-                } else {
-                    dialog[0].open();
-                }
-            }
-            const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
-            $scope.saveConnection = function (data) {
-                if (data !== undefined || data !== null) {
-                    $localStorage.myconnections.push(data);
-                    $scope.myconnections = $localStorage.myconnections;
-                }
-            }
-            $scope.connectToDB = function (dbData, index) {
+            $scope.tables = [];
+            $scope.connect = $scope.myconnections[$routeParams.databaseId];
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/query?host=' + $scope.connect.host + '&name=' + $scope.connect.db + '&username=' + $scope.connect.username + '&pw=' + $scope.connect.pw + '&sqlQuery=SELECT * FROM information_schema.tables WHERE TABLE_SCHEMA = \'' + $scope.connect.db + '\';'
+            }).then(function successCallback(response) {
+                $scope.tables = response.data;
+                console.log($scope.tables);
+            }, function errorCallback(response) {
+                console.error(response);
+            });
+            $scope.connectToDB = function (dbData) {
+                console.log(dbData);
                 $http({
                     method: 'GET',
                     url: 'http://localhost:3000/connect?host=' + dbData.host + '&name=' + dbData.db + '&username=' + dbData.username + '&pw=' + dbData.pw
                 }).then(function successCallback(response) {
-                    $location.path('/connection/' + index);
+                    console.log("dbData");
                 }, function errorCallback(response) {
                     console.error(response);
                 });

@@ -9,8 +9,10 @@ import 'angular-route';
 var notheidi = angular.module('notheidi', ['ngRoute', 'ngStorage']);
 
 import homeConfig from "./pages/home/home.js";
-
+import connectionConfig from "./pages/connection/connection.js";
 notheidi.config(homeConfig);
+notheidi.config(connectionConfig);
+s
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 //    nodejs.start('./server.js', function (success) {
