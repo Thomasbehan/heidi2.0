@@ -1,0 +1,36 @@
+{
+  "_from": "git+https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+  "_id": "cordova-plugin-sqlserver@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-sqlserver",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+    "rawSpec": "https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+    "saveSpec": "git+https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+    "fetchSpec": "https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git#3a72faa7c89a4fb823d234ceb28f9d526c4d72d6",
+  "_spec": "https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+  "_where": "C:\\heidi2.0\\notHeidi",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-sqlserver"
+  },
+  "deprecated": false,
+  "description": "Access to SQL Server database directly without any service",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "name": "cordova-plugin-sqlserver",
+  "version": "1.0.0"
+}

@@ -1,0 +1,148 @@
+<div class="mdc-layout-grid topHeader">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+            <button class="mdc-fab mdc-fab--extended" ng-click="toggleNewConnection()">
+                <span class="material-icons mdc-fab__icon">add</span>
+                <span class="mdc-fab__label">New Connection</span>
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell">
+        </div>
+        <div class="mdc-layout-grid__cell">
+        </div>
+    </div>
+</div>
+<hr class="mdc-list-divider">
+<div class="mdc-layout-grid topHeader">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell" ng-repeat="connect in myconnections">
+            <div class="mdc-card demo-card">
+                <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0" style="--mdc-ripple-fg-size:210px; --mdc-ripple-fg-scale:1.83158; --mdc-ripple-fg-translate-start:-13.8px, -31.975px; --mdc-ripple-fg-translate-end:70px, -38.2px;">
+                    <div class="mdc-card__primary padding1rem">
+                        <h2 class="mdc-card__title mdc-typography--headline6">{{connect.label}}</h2>
+                        <h3 class="mdc-card__subtitle mdc-typography--subtitle2">{{connect.host}}</h3>
+                    </div>
+                    <div class="mdc-card__secondary mdc-typography--body2 padding1rem">Click the bellow button to connect to {{connect.label}} as {{connect.username}}.</div>
+                </div>
+                <div class="mdc-card__actions mdc-card__actions--full-bleed">
+                    <a class="mdc-button mdc-card__action mdc-card__action--button" ng-click="connectToDB(connect)">
+                        Connect
+                        <i class="material-icons" aria-hidden="true">arrow_forward</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell" ng-if="myconnections.length === 0">
+            <div class="mdc-card demo-card">
+                <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0" style="--mdc-ripple-fg-size:210px; --mdc-ripple-fg-scale:1.83158; --mdc-ripple-fg-translate-start:-13.8px, -31.975px; --mdc-ripple-fg-translate-end:70px, -38.2px;">
+                    <div class="mdc-card__primary padding1rem">
+                        <h2 class="mdc-card__title mdc-typography--headline6">No Saved Connections</h2>
+                        <h3 class="mdc-card__subtitle mdc-typography--subtitle2">Add more above</h3>
+                    </div>
+                    <div class="mdc-card__secondary mdc-typography--body2 padding1rem">Click the new connection button at the top of this page to save a new connection and use it.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--TABLE-->
+
+
+
+<!--NEW CONNECTION DIALOG BOX-->
+<div class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+    <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface">
+            <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+            <h2 class="mdc-dialog__title" id="my-dialog-title">
+                New Connection
+            </h2>
+            <div class="mdc-dialog__content" id="my-dialog-content">
+                <span>Network Type: TCP/IP</span>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="text" ng-model="connectionDetails.label" id="label-text-field" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="label-text-field" class="mdc-floating-label">Label</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="text" ng-model="connectionDetails.host" id="host-text-field" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="host-text-field" class="mdc-floating-label">Host/IP</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="number" ng-model="connectionDetails.port" id="port-text-field" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="port-text-field" class="mdc-floating-label">Port</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="text" ng-model="connectionDetails.username" id="username-text-field" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="username-text-field" class="mdc-floating-label">Username</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="password" ng-model="connectionDetails.pw" id="pw-text-field" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="pw-text-field" class="mdc-floating-label">Password</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="text" ng-model="connectionDetails.db" id="db-text-field" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="db-text-field" class="mdc-floating-label">Database</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="mdc-dialog__actions">
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">Close</button>
+                <button type="button" class="mdc-button mdc-dialog__button" ng-click="saveConnection(connectionDetails)" data-mdc-dialog-action="save">Save</button>
+            </footer>
+        </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+</div>

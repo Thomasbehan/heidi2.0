@@ -13,6 +13,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <hook src="scripts/server.bat" type="before_run" />
+    <hook src="scripts/server.bat" type="before_emulate" />
+    <hook src="scripts/server.bat" type="before_sereve" />
+    <hook src="scripts/prebuild.bat" type="before_prepare" />
     <icon height="150" src="res/icons/windows/Square150x150Logo.scale-100.png" width="150" />
     <icon height="360" src="res/icons/windows/Square150x150Logo.scale-240.png" width="360" />
     <icon height="30" src="res/icons/windows/Square30x30Logo.scale-100.png" width="30" />

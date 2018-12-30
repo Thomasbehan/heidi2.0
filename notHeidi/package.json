@@ -3,6 +3,14 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-        "@material/drawer": "^0.42.0"
+        "@material/drawer": "^0.42.0",
+        "cordova-plugin-sqlserver": "git+https://github.com/SergioDosSantos/cordova-plugin-sqlserver.git",
+        "nodejs-mobile-cordova": "^0.2.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-sqlserver": {},
+            "nodejs-mobile-cordova": {}
+        }
     }
 }

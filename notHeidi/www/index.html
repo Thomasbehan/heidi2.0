@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="notheidi">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -10,8 +10,9 @@
     <link rel="shortcut icon" href="https://material.io/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" href="bundle-login.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="bundle-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&style=outlined">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 </head>
 
 <body>
@@ -26,9 +27,10 @@
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
                     <span class="mdc-list-item__text">Test 2</span>
                 </a>
+                <hr class="mdc-list-divider">
                 <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Test 3</span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">fiber_new</i>
+                    <span class="mdc-list-item__text">New Connection</span>
                 </a>
             </div>
         </div>
@@ -44,14 +46,12 @@
             </div>
         </header>
 
-        <main class="main-content" id="main-content">
-            <div class="mdc-top-app-bar--fixed-adjust">
-                Content
-            </div>
+        <main class="main-content" id="main-content" ng-view>
         </main>
     </div>
-<!--    <script type="text/javascript" src="cordova.js"></script>-->
-    <script src="bundle-login.js" async></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="bundle-app.js" async></script>
+    <script src="bundle.js" async></script>
 </body>
 
 </html>

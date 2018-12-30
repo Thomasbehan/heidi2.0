@@ -36,6 +36,7 @@
     <Resource Language="IS-ODD" />
     <Resource Language="IS-PLAIN-OBJECT" />
     <Resource Language="IS-POSIX-BRACKET" />
+    <Resource Language="IS-PROMISE" />
     <Resource Language="IS-PROPERTY" />
     <Resource Language="IS-REGEX" />
     <Resource Language="IS-STREAM" />
@@ -44,6 +45,7 @@
     <Resource Language="IS-WINDOWS" />
     <Resource Language="IS-WSL" />
     <Resource Language="MS" />
+    <Resource Language="TO-ARRAY" />
     <Resource Language="TO-REGEX" />
     <Resource Language="TO-REGEX-RANGE" />
   </Resources>
